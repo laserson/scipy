@@ -360,9 +360,10 @@ void print_vec(const double *d, int n) {
  * kc:    Keep track of the centroids.
  */
 void linkage(double *dm, double *Z, double *X,
-	     int m, int n, int ml, int kc, distfunc dfunc,
+	     int m, long n, int ml, int kc, distfunc dfunc,
 	     int method) {
-  int i, j, k, t, np, nid, mini, minj, npc2;
+  int i, j, k, t, nid, mini, minj;
+  long np, npc2;
   double min, ln, rn, qn;
   int *ind;
   /** An iterator through the distance matrix. */
